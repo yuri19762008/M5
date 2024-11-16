@@ -1,0 +1,21 @@
+Mini Guía Importación de BBDD desde archivo TAR.
+Caso: Drilling Final Módulo 5 - FS.Python
+
+1) Descargar el archivo "dvdrental.zip".
+
+2) Descomprimir el archivo anterior en la carpeta de su preferencia.
+   Aparecerá el archivo "dvdrental.tar". NO descomprimir ese último.
+   
+3) Abrir "Símbolo de Sistema" (CMD) en la carpeta anterior.
+
+4) Crear previamente la base de datos receptora. Puede hacerlo en el PSQL o
+   en el PgAdmin. 
+   Para efectos del ejemplo, la base creada se llamará "drillingm5"
+
+5) Ejecutar en el CMD, el siguiente comando:
+
+	pg_restore -c -U postgres -d drillingm5 -v "dvdrental.tar"
+
+6) Luego, revise la estructura de dicha BBDD para corroborar que están
+   todas las tablas y datos disponibles.
+   
